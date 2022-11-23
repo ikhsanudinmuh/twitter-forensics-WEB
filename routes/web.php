@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', [ForensicController::class, 'index']);
 Route::get('/twitter/{id}', [ForensicController::class, 'pullTwitter']);
+Route::get('/twitter/chat/{id}', [ForensicController::class, 'showTwitterChat']);
+Route::get('/twitter/user/{id}', [ForensicController::class, 'showTwitterUser']);

@@ -5,6 +5,12 @@
   @include('layouts.navbar')
 
   <div class="container-fluid">
+    @if (session('success'))
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    @endif  
     <main>
       <!-- Section 1 -->
       <div class="row" id="main-section">
@@ -65,4 +71,4 @@
     </main>
   </div>
 
-{{-- @include('layouts.footer') --}}
+@include('layouts.footer')
